@@ -19,6 +19,13 @@ public class MainActivity extends AppCompatActivity {
         Log.d("sssssssss",appKey);
 
         NativeHelper.printLog("测试Log");
+
+
+        String obj = "obj";
+        short s = 1;
+        long l = 20;
+        byte b = 127;
+        new NativeHelper().testType(s, 1, l, 1.0f, 10.5, 'A', true, b, "中国", obj, new MyClass(), new int[] {});  ;
     }
 
     /**
