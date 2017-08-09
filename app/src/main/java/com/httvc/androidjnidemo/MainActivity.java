@@ -39,6 +39,8 @@ public class MainActivity extends AppCompatActivity {
         }
       //  String i = intArray.sumArray(arr);
       //  sumText.setText(i);
+        String i = intArray.sumArray(arr);
+        sumText.setText(i);
     }
 
     /**
