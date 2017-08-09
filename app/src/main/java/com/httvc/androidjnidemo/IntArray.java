@@ -10,7 +10,8 @@ package com.httvc.androidjnidemo;
 
 // 访问基本类型数组
 public class IntArray {
-    public  native int sumArray(int[] arr);
+    public  native String sumArray(int[] arr);
+    public native int sumArray2(int[] arr);
 
     static {
         System.loadLibrary("native-lib");
