@@ -37,8 +37,8 @@ public class MainActivity extends AppCompatActivity {
         for (int i = 0; i <arr.length ; i++) {
             arr[i]=i;
         }
-        int i = intArray.sumArray(arr);
-        sumText.setText(i+"");
+      //  String i = intArray.sumArray(arr);
+      //  sumText.setText(i);
     }
 
     /**

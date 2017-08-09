@@ -2,7 +2,7 @@
 // Created by 贾富杰 on 2017/8/3.
 //
 
-#include "com_httvc_androidjnidemo_NativeHelper.h"
+#include "NativeHelper.h"
 #include <jni.h>
 #include <android/log.h>
 #include <stdio.h>
