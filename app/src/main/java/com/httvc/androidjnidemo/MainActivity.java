@@ -1,7 +1,7 @@
 package com.httvc.androidjnidemo;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.widget.TextView;
 
@@ -12,20 +12,33 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-    // Example of a call to a native method
-    TextView tv = (TextView) findViewById(R.id.sample_text);
-    tv.setText(stringFromJNI());
+        // Example of a call to a native method
+        TextView tv = (TextView) findViewById(R.id.sample_text);
+        TextView tt = (TextView) findViewById(R.id.sss_text);
+        TextView sumText = (TextView) findViewById(R.id.sum_text);
+
+        tv.setText(stringFromJNI());
         String appKey = NativeHelper.getAppKey();
-        Log.d("sssssssss",appKey);
+        Log.d("sssssssss", appKey);
 
         NativeHelper.printLog("测试Log");
-
 
         String obj = "obj";
         short s = 1;
         long l = 20;
         byte b = 127;
         new NativeHelper().testType(s, 1, l, 1.0f, 10.5, 'A', true, b, "中国", obj, new MyClass(), new int[] {});  ;
+        //String text = Sample.sayHello("yanxin");
+        String text = Sample.sayHellos("sssssss");
+        tt.setText(text);
+
+        IntArray intArray = new IntArray();
+        int[] arr=new int[10];
+        for (int i = 0; i <arr.length ; i++) {
+            arr[i]=i;
+        }
+        int i = intArray.sumArray(arr);
+        sumText.setText(i+"");
     }
 
     /**

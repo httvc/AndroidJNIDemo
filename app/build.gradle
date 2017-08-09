@@ -10,9 +10,19 @@ android {
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        // This block is different from the one you use to link Gradle
+        // to your CMake build script.
         externalNativeBuild {
             cmake {
                 cppFlags "-frtti -fexceptions"
+
+                // Use the following syntax when passing arguments to variables:
+                // arguments "-DVAR_NAME=ARGUMENT".
+                arguments "-DANDROID_ARM_NEON=TRUE",
+                        // If you're passing multiple arguments to a variable, pass them together:
+                        // arguments "-DVAR_NAME=ARG_1 ARG_2"
+                        // The following line passes 'rtti' and 'exceptions' to 'ANDROID_CPP_FEATURES'.
+                        "-DANDROID_CPP_FEATURES=rtti exceptions"
             }
         }
     }
@@ -34,7 +44,7 @@ dependencies {
     androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
         exclude group: 'com.android.support', module: 'support-annotations'
     })
-    compile 'com.android.support:appcompat-v7:25.3.1'
+    compile 'com.android.support:appcompat-v7:25.1.1'
     compile 'com.android.support.constraint:constraint-layout:1.0.2'
     testCompile 'junit:junit:4.12'
 }
