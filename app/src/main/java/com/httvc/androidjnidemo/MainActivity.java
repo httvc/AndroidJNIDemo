@@ -39,8 +39,15 @@ public class MainActivity extends AppCompatActivity {
         }
       //  String i = intArray.sumArray(arr);
       //  sumText.setText(i);
-        String i = intArray.sumArray(arr);
-        sumText.setText(i);
+        int ss = intArray.sumArray(arr);
+        int i1 = intArray.sumArray2(arr);
+        int[][] arrs = intArray.initInt2DArray(3);
+        for (int i = 0; i < 3; i++) {
+            for (int j = 0; j < 3; j++) {
+                System.out.format("arr[%d][%d] = %d\n", i, j, arrs[i][j]);
+            }
+        }
+        sumText.setText(ss+","+i1);
     }
 
     /**
