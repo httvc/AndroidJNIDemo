@@ -48,6 +48,22 @@ public class MainActivity extends AppCompatActivity {
             }
         }
         sumText.setText(ss+","+i1);
+        AccessMethod.callJavaStaticMethod();
+        AccessMethod.callJavaInstanceMethod();
+
+        ClassField objs=new ClassField();
+        objs.setNum(10);
+        objs.setStr("Hello");
+
+        AccessField.accessInstanceField(objs);
+        // 输出本地代码修改过后的值
+        System.out.println("In Java--->ClassField.num = " + objs.getNum());
+        System.out.println("In Java--->ClassField.str = " + objs.getStr());
+
+        AccessField.accessStaticField();
+        // 输出本地代码修改过后的值
+        System.out.println("In Java--->ClassField.num = " + objs.getNum());
+        System.out.println("In Java--->ClassField.str = " + objs.getStr());
     }
 
     /**

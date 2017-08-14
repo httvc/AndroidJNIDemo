@@ -20,7 +20,9 @@ add_library( # Sets the name of the library.
              src/main/cpp/native-lib.cpp
              src/main/cpp/NativeHelper.c
              src/main/cpp/Sample.c
-             src/main/cpp/IntArray.c)
+             src/main/cpp/IntArray.c
+             src/main/cpp/AccessMethod.c
+             src/main/cpp/AccessField.c)
 
 # Searches for a specified prebuilt library and stores the path as a
 # variable. Because CMake includes system libraries in the search path by
