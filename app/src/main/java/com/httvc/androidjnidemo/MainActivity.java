@@ -64,6 +64,12 @@ public class MainActivity extends AppCompatActivity {
         // 输出本地代码修改过后的值
         System.out.println("In Java--->ClassField.num = " + objs.getNum());
         System.out.println("In Java--->ClassField.str = " + objs.getStr());
+
+      //  Animal cat = new Cat("汤姆");
+      //  cat.run();
+        AccessSuperMethod.callSuperInstanceMethod();
+
+
     }
 
     /**
