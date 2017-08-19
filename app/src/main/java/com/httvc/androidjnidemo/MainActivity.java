@@ -69,6 +69,18 @@ public class MainActivity extends AppCompatActivity {
       //  cat.run();
         AccessSuperMethod.callSuperInstanceMethod();
 
+        AccessCache accessCache=new AccessCache();
+        accessCache.accessField();
+        char chars[] = new char[7];
+        chars[0] = '中';
+        chars[1] = '华';
+        chars[2] = '人';
+        chars[3] = '民';
+        chars[4] = '共';
+        chars[5] = '和';
+        chars[6] = '国';
+        String str = accessCache.newString(chars, 6);
+        System.out.println(str);
 
     }
 

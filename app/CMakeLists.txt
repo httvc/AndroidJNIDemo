@@ -23,7 +23,8 @@ add_library( # Sets the name of the library.
              src/main/cpp/IntArray.c
              src/main/cpp/AccessMethod.c
              src/main/cpp/AccessField.c
-             src/main/cpp/AccessSuperMethod.c)
+             src/main/cpp/AccessSuperMethod.c
+             src/main/cpp/AccessCache.c)
 
 # Searches for a specified prebuilt library and stores the path as a
 # variable. Because CMake includes system libraries in the search path by
