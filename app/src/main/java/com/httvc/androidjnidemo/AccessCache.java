@@ -9,7 +9,7 @@ package com.httvc.androidjnidemo;
  */
 
 public class AccessCache {
-    public  native void accessField(); // 访问str成员变量
+    public  native void accessField(String str); // 访问str成员变量
     public native String newString(char[] chars, int len); // 根据字符数组和指定长度创建String对象
 
     static {
